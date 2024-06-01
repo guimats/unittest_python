@@ -1,4 +1,4 @@
-from calculadora import soma
+from src.calculadora import soma
 
 # print(soma(12, 32))
 # print(soma(-12, 32))

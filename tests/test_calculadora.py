@@ -1,5 +1,19 @@
+try:
+    import sys
+    import os
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '..\\src'
+            )
+        )
+    )
+except ImportError:
+    raise
 import unittest
-from calculadora import soma
+from calculadora import soma  # type: ignore
 
 
 class TesteCalculadora(unittest.TestCase):
@@ -32,4 +46,5 @@ class TesteCalculadora(unittest.TestCase):
             soma(6, '11')
 
 
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
